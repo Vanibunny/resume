@@ -8,7 +8,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class MoviesController extends BaseController
 {
-    public function index()
+    public function movies()
     {
 
         $movies_model = new ResumeModel();
@@ -18,7 +18,7 @@ class MoviesController extends BaseController
             "movies" => $movies,
         ];
 
-        return view('blog/index', $array);
+        return view('github/movies', $array);
     }
 
     public function create()

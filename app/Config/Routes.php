@@ -39,4 +39,4 @@ $routes->get('blog/edit/(:num)', 'BlogController::edit/$1');
 $routes->post('blog/update/(:num)', 'BlogController::update/$1');
 
 
-$routes->get('movies', 'MoviesController::index');
+$routes->get('github', 'MoviesController::movies');

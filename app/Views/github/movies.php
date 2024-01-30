@@ -69,7 +69,7 @@
     </style>
 </head>
 <body>
-    <h1>This is are my favorite movies</h1>
+    <h1>These is are my favorite movies</h1>
     <a href="<?= base_url('movies/create') ?>">Create</a>
     <a href="<?= base_url('movies/edit/1') ?>">Edit</a>
 
@@ -80,10 +80,10 @@
             <th>Action</th>
         </tr>
 
-        <?php foreach($movies as $movies): ?>
+        <?php foreach($movies as $movie): ?>
             <tr>
-                <td><?= $movies['title'] ?></td>
-                <td><?= $movies['description'] ?></td>
+                <td><?= $movie['title'] ?></td>
+                <td><?= $movie['description'] ?></td>
                 <td>
                     <a href="<?= base_url('movies/edit/') . $movies['id'] ?>">
                         <button class="edit-btn">Edit</button>
