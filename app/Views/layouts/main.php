@@ -48,6 +48,9 @@
 
                     <a class="navbar-item" href="<?= base_url("future") ?>">
                         Future
+
+                    <a class="navbar-item" href="<?= base_url("movies") ?>">
+                        Favorite Movies
                     </a>
                 </div>
             </div>

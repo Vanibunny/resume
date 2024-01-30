@@ -21,52 +21,52 @@ class MoviesController extends BaseController
         return view('github/movies', $array);
     }
 
-    public function create()
+    public function movies_create()
     {
-        return view('blog/create');
+        return view('github/movies_create');
     }
 
-    public function edit($id)
+    public function movies_edit($id)
     {
-        $blog_model = new ResumeModel();
-        $blog = $blog_model->where('blog_id', $id)->first();
+        $movies_model = new ResumeModel();
+        $movies = $movies_model->where('id', $id)->first();
 
-        return view('blog/edit', [
-            "user_id" => $id,
-            "qwerty" => $blog,
+        return view('movies_edit', [
+            "id" => $id,
+            "movies" => $movies,
         ]);
     }
 
-    public function store()
+    public function movies_store()
     {
-        $blog_title = esc($this->request->getPost('blog_title'));
-        $blog_description = esc($this->request->getPost('blog_description'));
+        $title = esc($this->request->getPost('title'));
+        $description = esc($this->request->getPost('description'));
 
-        $blog_data = [
-            'blog_title' => $blog_title,
-            'blog_description' => $blog_description,
+        $data = [
+            'title' => $title,
+            'description' => $description,
         ];
 
-        $blog_model = new ResumeModel();
-        $blog_model->insert($blog_data);
+        $movies_model = new ResumeModel();
+        $movies_model->insert($data);
 
         return redirect()->back();
     }
 
-    public function update($id)
+    public function movies_update($id)
     {
-        $blog_title = esc($this->request->getPost('blog_title'));
-        $blog_description = esc($this->request->getPost('blog_description'));
+        $title = esc($this->request->getPost('title'));
+        $description = esc($this->request->getPost('description'));
 
-        $blog_data = [
-            'blog_title' => $blog_title,
-            'blog_description' => $blog_description,
+        $data = [
+            'title' => $title,
+            'description' => $description,
         ];
 
-        $blog_model = new ResumeModel();
+        $movies_model = new ResumeModel();
 
-        $blog = $blog_model->where('blog_id', $id)
-            ->set($blog_data)
+        $blog = $movies_model->where('id', $id)
+            ->set($data)
             ->update();
 
         return redirect()->back();
