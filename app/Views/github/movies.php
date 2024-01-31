@@ -49,23 +49,26 @@
             background-color: #f1f1f1;
         }
 
-        .edit-btn {
+        .edit-btn, .delete-button {
             background-color: #474F7A;
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 8px 12px;
+            padding: 10px;
+            margin: 5px; 
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 14px;
             cursor: pointer;
+            width: 80px;
             transition: background-color 0.3s ease-in-out;
         }
 
-        .edit-btn:hover {
+        .edit-btn:hover, .delete-button:hover {
             background-color: #F0B7A4;
         }
+
     </style>
 </head>
 <body>
