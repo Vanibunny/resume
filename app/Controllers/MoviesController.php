@@ -71,4 +71,17 @@ class MoviesController extends BaseController
 
         return redirect()->back();
     }
+    public function movies_delete($id)
+    {
+        $movies_model = new ResumeModel();
+        $movie = $movies_model->find($id);
+
+        if (!$movie) {
+        return redirect()->to('/movies');
+    }
+
+        $movies_model->delete($id, 'id');
+
+        return redirect()->to('/movies');
+    }
 }

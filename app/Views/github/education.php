@@ -90,7 +90,7 @@
     <div class="container">
         <!-- Add the custom class to the h2 element -->
         <h2 class="title is-2 custom-h2-color">Education</h2>
-        <p>Here is a snapshot of my educational journey from kindergarten to college.</p>
+        <p>Here are some snapshots of my educational journey from kindergarten to college.</p>
 
         <!-- Replace the text content with a container of pictures and descriptions -->
         <div class="hobbies-container">

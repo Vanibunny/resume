@@ -89,6 +89,10 @@
                     <a href="<?= base_url('movies_edit/') . $movie['id'] ?>">
                         <button class="edit-btn">Edit</button>
                     </a>
+                    <form style="display:inline" action="<?= base_url('movies_delete/') . $movie['id'] ?>" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</button>
+                    </form>
                 </td>
             </tr>
         <?php endforeach; ?>

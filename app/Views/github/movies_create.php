@@ -79,7 +79,7 @@
         <a href=<?= base_url("movies") ?>>Movies</a>
         <a href=<?= base_url("index") ?>>Back to home page</a>
 
-    <form method="post" action="<?= base_url('github/movies_store') ?>">
+    <form method="post" action="<?= base_url('movies_store') ?>">
         <label for="title">Movies:</label>
         <input type="text" id="title" name="title" required>
 
