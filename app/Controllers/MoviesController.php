@@ -29,11 +29,11 @@ class MoviesController extends BaseController
     public function movies_edit($id)
     {
         $movies_model = new ResumeModel();
-        $movies = $movies_model->where('id', $id)->first();
+        $movie = $movies_model->where('id', $id)->first();
 
-        return view('movies_edit', [
+        return view('github/movies_edit', [
             "id" => $id,
-            "movies" => $movies,
+            "qwerty" => $movie,
         ]);
     }
 
@@ -65,7 +65,7 @@ class MoviesController extends BaseController
 
         $movies_model = new ResumeModel();
 
-        $blog = $movies_model->where('id', $id)
+        $movie = $movies_model->where('id', $id)
             ->set($data)
             ->update();
 

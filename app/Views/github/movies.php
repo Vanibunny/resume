@@ -17,13 +17,13 @@
 
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #81689D;
             margin-right: 15px;
             transition: color 0.3s ease-in-out;
         }
 
         a:hover {
-            color: #0056b3;
+            color: #1F2544;
         }
 
         table {
@@ -41,7 +41,7 @@
         }
 
         th {
-            background-color: #1f363d;
+            background-color: #1F2544;
             color: white;
         }
 
@@ -50,7 +50,7 @@
         }
 
         .edit-btn {
-            background-color: #40798c;
+            background-color: #474F7A;
             color: white;
             border: none;
             border-radius: 5px;
@@ -64,15 +64,16 @@
         }
 
         .edit-btn:hover {
-            background-color: #218838;
+            background-color: #F0B7A4;
         }
     </style>
 </head>
 <body>
     <h1>These are my favorite movies</h1>
     <a href="<?= base_url('movies_create') ?>">Create</a>
-    <a href="<?= base_url('movies_edit') ?>">Edit</a>
-
+    <a href="<?= base_url('movies_edit/1') ?>">Edit</a>
+    <a href=<?= base_url("index") ?>>Back to home page</a>
+    
     <table>
         <tr>
             <th>Title</th>
@@ -80,12 +81,12 @@
             <th>Action</th>
         </tr>
 
-        <?php foreach($movies as $movies): ?>
+        <?php foreach($movies as $movie): ?>
             <tr>
-                <td><?= $movies['title'] ?></td>
-                <td><?= $movies['description'] ?></td>
+                <td><?= $movie['title'] ?></td>
+                <td><?= $movie['description'] ?></td>
                 <td>
-                    <a href="<?= base_url('movies_edit') . $movies['id'] ?>">
+                    <a href="<?= base_url('movies_edit/') . $movie['id'] ?>">
                         <button class="edit-btn">Edit</button>
                     </a>
                 </td>

@@ -86,8 +86,8 @@
                     success harmoniously coexists with personal well-being, allowing to enjoy quality time with family and pursue personal interests.</p>
                 <br>
                 <!-- Back link to go back to the About Me page with custom styling -->
-                <p class="back-link"><a href="<?= base_url("index") ?>" style="background-color: #F0B7A4; color: #fff;" 
-                        class="button">Back to home page</a>
+                <p class="back-link"><a href="<?= base_url("movies") ?>" style="background-color: #F0B7A4; color: #fff;" 
+                        class="button">Movies that I like</a>
                 </p>
             </div>
             <div class="column is-6">

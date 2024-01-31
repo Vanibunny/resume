@@ -3,11 +3,10 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\ResumeModel;
 use CodeIgniter\HTTP\ResponseInterface;
-use App\Models\ResumeModelModel;
+use App\Models\ResumeModel;
 
-class ResumeController extends BaseController
+class MoviesController extends BaseController
 {
     public function movies()
     {
