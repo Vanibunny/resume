@@ -69,6 +69,11 @@
             background-color: #F0B7A4;
         }
 
+        td .edit-btn, td .delete-button{
+            display: block;
+            margin: 0 auto;
+        }
+
     </style>
 </head>
 <body>
