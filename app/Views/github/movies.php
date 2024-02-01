@@ -94,7 +94,7 @@
                     </a>
                     <form style="display:inline" action="<?= base_url('movies_delete/') . $movie['id'] ?>" method="post">
                             <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</button>
+                            <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</button>
                     </form>
                 </td>
             </tr>
