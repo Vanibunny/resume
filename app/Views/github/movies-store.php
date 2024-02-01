@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
-use App\Models\ResumeModel;
+use App\Models\MoviesModel;
 
 class MoviesController extends BaseController
 {
@@ -15,12 +15,12 @@ class MoviesController extends BaseController
 
     public function movies_create()
     {
-        return view('movies_create');
+        return view('movies-create');
     }
 
     public function movies_edit($id)
     {
-        return view('movies_edit');
+        return view('movies-edit');
     }
 
     public function movies_store()
@@ -33,7 +33,7 @@ class MoviesController extends BaseController
             'description' => $description,
         ];
         
-        $movies_model = new ResumeModel();
+        $movies_model = new MoviesModel();
         $movies_model->insert($data);
 
         return redirect()->back();

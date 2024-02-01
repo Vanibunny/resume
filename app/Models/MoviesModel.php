@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ResumeModel extends Model
+class MoviesModel extends Model
 {
     protected $table            = 'movies';
     protected $primaryKey       = 'id';

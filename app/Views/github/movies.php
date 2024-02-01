@@ -78,8 +78,8 @@
 </head>
 <body>
     <h1>These are my favorite movies</h1>
-    <a href="<?= base_url('movies_create') ?>">Create</a>
-    <a href="<?= base_url('movies_edit/1') ?>">Edit</a>
+    <a href="<?= base_url('movies-create') ?>">Create</a>
+    <a href="<?= base_url('movies-edit/1') ?>">Edit</a>
     <a href=<?= base_url("index") ?>>Back to home page</a>
     
     <table>
@@ -94,10 +94,10 @@
                 <td><?= $movie['title'] ?></td>
                 <td><?= $movie['description'] ?></td>
                 <td>
-                    <a href="<?= base_url('movies_edit/') . $movie['id'] ?>">
+                    <a href="<?= base_url('movies-edit/') . $movie['id'] ?>">
                         <button class="edit-btn">Edit</button>
                     </a>
-                    <form style="display:inline" action="<?= base_url('movies_delete/') . $movie['id'] ?>" method="post">
+                    <form style="display:inline" action="<?= base_url('movies-delete/') . $movie['id'] ?>" method="post">
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this movie?')">Delete</button>
                     </form>
